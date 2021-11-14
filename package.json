@@ -1,0 +1,29 @@
+{
+  "name": "super-auto-pets-battle-simulator",
+  "version": "1.0.0",
+  "description": "This will be a package that predicts the possible outcomes of a battle between 2 super auto pets teams.",
+  "main": "./dist/super-auto-pets-battle-simulator.js",
+  "scripts": {
+    "build": "tsc",
+    "test": "jasmine"
+  },
+  "keywords": [],
+  "author": "Farron Flaherty",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jasmine": "^2.8.18",
+    "eslint": "^8.2.0",
+    "jasmine-core": "^3.10.1",
+    "jasmine-ts-console-reporter": "^3.1.1",
+    "typescript": "^4.4.4"
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FarronF/super-auto-pets-battle-simulator.git"
+  },
+  "bugs": {
+    "url": "https://github.com/FarronF/super-auto-pets-battle-simulator/issues"
+  },
+  "homepage": "https://github.com/FarronF/super-auto-pets-battle-simulator#readme"
+}

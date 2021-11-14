@@ -1,0 +1,1 @@
+This will be a package that predicts the possible outcomes of a battle between 2 super auto pets teams.
