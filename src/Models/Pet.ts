@@ -3,10 +3,10 @@ import { Stats } from "./Stats";
 import { Status } from "./Status";
 
 export class Pet {
-    name: string;
-    stats: Stats;
-    ability: Ability
-    status: Status
+    public name: string;
+    public stats: Stats;
+    public ability: Ability
+    public status: Status
 
     constructor(name: string, stats: Stats, ability: Ability, status: Status) {
         this.name = name;

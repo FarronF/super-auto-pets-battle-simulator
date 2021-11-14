@@ -11,7 +11,7 @@ export class ClashRuleHandler extends RulesHandler {
         const rightTeamCombatant = battleState.rightTeam.getCombatant();
 
         if(!leftTeamCombatant || !rightTeamCombatant) {
-            throw new Error('The battle is already over');
+            throw new Error('Not enough combatant');
         }
 
         // TODO handle other status/abilities here

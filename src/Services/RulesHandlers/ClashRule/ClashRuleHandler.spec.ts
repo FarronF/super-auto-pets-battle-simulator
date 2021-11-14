@@ -2,6 +2,7 @@ import { Pet } from "../../../Models/Pet";
 import { BattleState } from "../../../Models/BattleState";
 import { ClashRuleHandler } from "./ClashRuleHandler";
 import { Team } from "../../../Models/Team";
+import { Stats } from "../../../Models/Stats";
 
 describe('ClashRuleHandler', () => {
     let clashRulesHandler: ClashRuleHandler;
@@ -19,10 +20,21 @@ describe('ClashRuleHandler', () => {
         leftCombatant = jasmine.createSpyObj<Pet>('Pet', ['damage']);
         rightCombatant = jasmine.createSpyObj<Pet>('Pet', ['damage']);
 
+        leftCombatant.stats = new Stats(11, 22);
+        rightCombatant.stats = new Stats(33, 44);
+
+        // spyOnProperty(leftCombatant, 'stats').and.returnValue(new Stats(11, 22));
+        // spyOnProperty(rightCombatant, 'stats').and.returnValue(new Stats(33, 44));
+
         leftTeam.getCombatant.and.returnValue(leftCombatant);
         rightTeam.getCombatant.and.returnValue(rightCombatant);
 
+        // leftCombatant.stats.attack = 11;
+        // rightCombatant.stats.attack = 22;
+
         battleState.isOver.and.returnValue(false);
+        battleState.leftTeam = leftTeam;
+        battleState.rightTeam = rightTeam;
 
         clashRulesHandler = new ClashRuleHandler();
     });
@@ -50,5 +62,10 @@ describe('ClashRuleHandler', () => {
         });
     });
 
+    it('should call damage function on both combatants', () => {
+        clashRulesHandler.implementRule(battleState);
 
-})
+        expect(leftCombatant.damage).toHaveBeenCalledWith(rightCombatant.stats.attack);
+        expect(rightCombatant.damage).toHaveBeenCalledWith(leftCombatant.stats.attack);
+    });
+});
