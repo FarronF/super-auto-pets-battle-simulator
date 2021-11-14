@@ -2,7 +2,7 @@ import { Ability } from "./Ability";
 import { Stats } from "./Stats";
 import { Status } from "./Status";
 
-export class BattlePet {
+export class Pet {
     name: string;
     stats: Stats;
     ability: Ability

@@ -1,15 +1,12 @@
-import { BattlePet } from "./BattlePet";
+import { Pet } from "./Pet";
+import { Team } from "./Team";
 
 export class BattleState {
-    constructor(public leftTeam: BattlePet[], public rightTeam: BattlePet[]) { // TODO Change teams to own model
+    constructor(public leftTeam: Team, public rightTeam: Team) {
 
     }
 
     isOver() : boolean {
-        return this.teamsPetsAreAllGone(this.leftTeam) || this.teamsPetsAreAllGone(this.rightTeam);
-    }
-
-    private teamsPetsAreAllGone(team: BattlePet[]) {
-        return team.every(pet => !pet);
+        return this.leftTeam.petsAreGone() || this.rightTeam.petsAreGone()
     }
 }
