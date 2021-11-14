@@ -5,7 +5,7 @@
   "main": "./dist/super-auto-pets-battle-simulator.js",
   "scripts": {
     "build": "tsc",
-    "test": "jasmine"
+    "test": "tsc && jasmine"
   },
   "keywords": [],
   "author": "Farron Flaherty",
