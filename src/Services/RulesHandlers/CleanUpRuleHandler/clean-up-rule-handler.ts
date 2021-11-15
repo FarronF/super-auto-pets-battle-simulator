@@ -1,5 +1,5 @@
-import { BattleState } from "../../../Models/BattleState";
-import { RulesHandler } from "../RulesHandler";
+import { BattleState } from "../../../Models/battle-state";
+import { RulesHandler } from "../rules-handler";
 
 export class CleanUpRuleHandler extends RulesHandler {
     implementRule(battleState: BattleState): BattleState {

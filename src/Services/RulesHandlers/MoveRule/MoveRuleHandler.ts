@@ -1,6 +1,6 @@
-import { BattleState } from "../../../Models/BattleState";
-import { Pet } from "../../../Models/Pet";
-import { RulesHandler } from "../RulesHandler";
+import { BattleState } from "../../../Models/battle-state";
+import { Pet } from "../../../Models/pet";
+import { RulesHandler } from "../rules-handler";
 
 export class MoveRuleHandler extends RulesHandler {
     implementRule(battleState: BattleState): BattleState {

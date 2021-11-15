@@ -1,8 +1,8 @@
-import { Pet } from "../../../Models/Pet";
-import { BattleState } from "../../../Models/BattleState";
-import { ClashRuleHandler } from "./ClashRuleHandler";
-import { Team } from "../../../Models/Team";
-import { Stats } from "../../../Models/Stats";
+import { Pet } from "../../../Models/pet";
+import { BattleState } from "../../../Models/battle-state";
+import { ClashRuleHandler } from "./clash-rule-handler";
+import { Team } from "../../../Models/team";
+import { Stats } from "../../../Models/stats";
 
 describe('ClashRuleHandler', () => {
     let clashRulesHandler: ClashRuleHandler;

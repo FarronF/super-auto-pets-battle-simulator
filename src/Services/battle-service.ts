@@ -1,11 +1,11 @@
-import { BattleState } from "../Models/BattleState";
-import { Pet } from "../Models/Pet";
-import { Stats } from "../Models/Stats";
-import { Team } from "../Models/Team";
-import { ClashRuleHandler } from "./RulesHandlers/ClashRule/ClashRuleHandler";
-import { CleanUpRuleHandler } from "./RulesHandlers/CleanUpRuleHandler/CleanUpRuleHandler";
+import { BattleState } from "../Models/battle-state";
+import { Pet } from "../Models/pet";
+import { Stats } from "../Models/stats";
+import { Team } from "../Models/team";
+import { ClashRuleHandler } from "./RulesHandlers/ClashRule/clash-rule-handler";
+import { CleanUpRuleHandler } from "./RulesHandlers/CleanUpRuleHandler/clean-up-rule-handler";
 import { MoveRuleHandler } from "./RulesHandlers/MoveRule/MoveRuleHandler";
-import { RulesHandler } from "./RulesHandlers/RulesHandler";
+import { RulesHandler } from "./RulesHandlers/rules-handler";
 
 export class BattleService {
   constructor() {

@@ -1,6 +1,6 @@
-import { Ability } from "./Ability";
-import { Stats } from "./Stats";
-import { Status } from "./Status";
+import { Ability } from "./ability";
+import { Stats } from "./stats";
+import { Status } from "./status";
 
 export class Pet {
     public name: string;

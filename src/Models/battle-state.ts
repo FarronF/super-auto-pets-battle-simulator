@@ -1,5 +1,5 @@
-import { Pet } from "./Pet";
-import { Team } from "./Team";
+import { Pet } from "./pet";
+import { Team } from "./team";
 
 export class BattleState {
     constructor(public leftTeam: Team, public rightTeam: Team) {
