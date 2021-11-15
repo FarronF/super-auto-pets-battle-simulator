@@ -23,14 +23,8 @@ describe('ClashRuleHandler', () => {
         leftCombatant.stats = new Stats(11, 22);
         rightCombatant.stats = new Stats(33, 44);
 
-        // spyOnProperty(leftCombatant, 'stats').and.returnValue(new Stats(11, 22));
-        // spyOnProperty(rightCombatant, 'stats').and.returnValue(new Stats(33, 44));
-
         leftTeam.getCombatant.and.returnValue(leftCombatant);
         rightTeam.getCombatant.and.returnValue(rightCombatant);
-
-        // leftCombatant.stats.attack = 11;
-        // rightCombatant.stats.attack = 22;
 
         battleState.isOver.and.returnValue(false);
         battleState.leftTeam = leftTeam;
