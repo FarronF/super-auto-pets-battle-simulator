@@ -16,11 +16,11 @@ export class ClashRuleHandler extends RulesHandler {
 
         // TODO handle other status/abilities here
 
-        const leftTeamCombatantAttack = leftTeamCombatant.stats.attack;
-        const rightTeamCombatantAttack = rightTeamCombatant.stats.attack;
+        const leftTeamCombatantAttack = leftTeamCombatant;
+        const rightTeamCombatantAttack = rightTeamCombatant;
 
-        leftTeamCombatant.damage(rightTeamCombatantAttack);
-        rightTeamCombatant.damage(leftTeamCombatantAttack);
+        battleState.leftTeam.attackedBy(rightTeamCombatantAttack);
+        battleState.rightTeam.attackedBy(leftTeamCombatantAttack);
 
         return battleState;
     }

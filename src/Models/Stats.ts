@@ -8,6 +8,6 @@ export class Stats {
     }
 
     public reduceHealth(amount: number) {
-        this.health -= amount;
+        this.health = this.health - amount;
     }
 }

@@ -9,4 +9,6 @@ export class BattleState {
     isOver() : boolean {
         return this.leftTeam.petsAreGone() || this.rightTeam.petsAreGone()
     }
+
+
 }

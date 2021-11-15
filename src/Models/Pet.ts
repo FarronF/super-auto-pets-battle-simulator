@@ -5,10 +5,10 @@ import { Status } from "./Status";
 export class Pet {
     public name: string;
     public stats: Stats;
-    public ability: Ability
-    public status: Status
+    public ability: Ability;
+    public status: Status;
 
-    constructor(name: string, stats: Stats, ability: Ability, status: Status) {
+    constructor(name: string, stats: Stats, ability: Ability = new Ability(), status: Status = new Status()) {
         this.name = name;
         this.stats = stats;
         this.ability = ability;
