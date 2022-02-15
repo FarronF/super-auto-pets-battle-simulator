@@ -1,6 +1,7 @@
+import { IClonable } from "../Interfaces/iclonable";
 import { Pet } from "./pet";
 
-export class Team {
+export class Team implements IClonable {
     name: string;
     pets: Array<Pet | null | undefined>;
     size: number = 5;
@@ -23,7 +24,7 @@ export class Team {
         return this.pets.every(pet => !pet);
     }
 
-    moveForward(spaces: number = 1): void {
+    movePetsForward(spaces: number = 1): void {
         for(let i = 0; i < this.size - 1; i++) {
             if(!this.pets[i]) {
                 this.pets[i] = this.pets[i+1];
@@ -34,7 +35,7 @@ export class Team {
 
     attackedBy(attacker: Pet) {
         const defender = this.getCombatant();
-        defender?.damage(attacker.stats.attack)
+        defender?.damage(attacker.stats.attack);
     }
 
     removeFainted() {
@@ -42,6 +43,15 @@ export class Team {
             if (!!pet && pet.stats.health <= 0) {
                 this.pets[index] = null;
             }
-        })
+        });
+    }
+
+    clone(): Team {
+        return new Team(this.name, this.pets.map(pet => {
+            if(!pet) {
+                return null;
+            }
+            return pet?.clone();
+        }));
     }
 }

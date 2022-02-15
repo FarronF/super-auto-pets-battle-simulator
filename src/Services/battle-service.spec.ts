@@ -1,4 +1,4 @@
-import { BattleService } from "./battle-service";
+import { BattleService } from './battle-service';
 
 fdescribe('BattleService', () => {
     it('Constructor test', () => {
